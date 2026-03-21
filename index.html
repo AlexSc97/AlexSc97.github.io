@@ -4,24 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alejandro Silva | Data Scientist Portfolio</title>
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- Animators (Orbs) en el Hero -->
+    <div class="hero-blur-orb orb-1"></div>
+    <div class="hero-blur-orb orb-2"></div>
+
     <!-- Navegación -->
-    <header>
+    <header id="navbar">
         <div class="container nav-container">
             <nav>
                 <div class="logo">Alejandro Silva.</div>
+                <!-- Menu Toggle para Mobile -->
+                <button class="mobile-menu-btn" aria-label="Abrir menú">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
                 <ul class="nav-links">
                     <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#modelos">Modelos Streamlit</a></li>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#proyectos">Expertise</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
@@ -29,109 +37,160 @@
     </header>
 
     <!-- Sección Hero -->
-    <section id="inicio" class="hero">
-        <!-- Imagen de fondo puramente decorativa -->
-        <img src="assets/hero-tech.png" alt="" class="hero-bg-img" aria-hidden="true" />
-        <!-- Overlay semitransparente para proteger la legibilidad del texto -->
-        <div class="hero-overlay"></div>
+    <section id="inicio" class="section hero relative">
+        <div class="hero-grid-bg"></div>
+        <div class="container relative z-10">
+            <div class="hero-content animate-on-scroll" style="--delay: 0.1s">
+                
+                <!-- Badge Animado -->
+                <div class="badge-status">
+                    <span class="pulse-dot"></span>
+                    <span class="font-mono text-sm tracking-widest uppercase">Disponible para nuevos retos</span>
+                </div>
 
-        <div class="container hero-container">
-            <div class="hero-content fade-in-up">
-                <h1>Hola, soy Alejandro Silva</h1>
-                <p>Soy un <strong>Científico de datos</strong> enfocado en construir sistemas de datos que generan impacto real — desde la exploración hasta la producción. Mi background incluye 5 años trabajando en entornos de <strong>alta exigencia y datos críticos</strong>, lo que me ha forjado una capacidad analítica orientada a consecuencias: no solo me importa que el modelo funcione, sino que resuelva el problema correcto.</p>
+                <h1 class="hero-title">Hola, soy Alejandro Silva</h1>
+                <p class="hero-subtitle">
+                    Soy un <strong>Científico de datos</strong> enfocado en construir sistemas de datos que generan impacto real — desde la exploración hasta la producción. Mi background incluye 5 años trabajando en entornos de <strong>alta exigencia y datos críticos</strong>, forjando una capacidad analítica orientada a consecuencias.
+                </p>
                 <div class="hero-buttons">
-                    <a href="#proyectos" class="btn">Ver Proyectos</a>
-                    <a href="#contacto" class="btn btn-outline">Contáctame</a>
+                    <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                    <a href="#contacto" class="btn btn-secondary">Contáctame</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container stats-grid">
+            <div class="stat-item animate-on-scroll" style="--delay: 0.1s">
+                <div class="stat-num font-mono">5+</div>
+                <div class="stat-label">Años de Exp.</div>
+            </div>
+            <div class="stat-item animate-on-scroll" style="--delay: 0.2s">
+                <div class="stat-num font-mono">15+</div>
+                <div class="stat-label">Proyectos ML</div>
+            </div>
+            <div class="stat-item animate-on-scroll" style="--delay: 0.3s">
+                <div class="stat-num font-mono">100%</div>
+                <div class="stat-label">Orientado a Impacto</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Timeline -->
+    <section id="sobre-mi" class="section">
+        <div class="container about-grid">
+            <div class="about-text animate-on-scroll">
+                <h2 class="section-title">Trayectoria & Filosofía</h2>
+                <p class="text-secondary mb-4">
+                    La ciencia de datos no se trata de entrenar modelos perfectos al vacío, se trata de resolver los problemas adecuados con la infraestructura técnica correcta.
+                </p>
+                <p class="text-secondary">
+                    Mi enfoque se basa en construir pipelines robustos, utilizar arquitecturas avanzadas de forma pragmática y llevar la IA a entornos críticos donde las consecuencias importan.
+                </p>
+            </div>
+            
+            <div class="timeline animate-on-scroll" style="--delay: 0.2s">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date font-mono">Actual</div>
+                    <div class="timeline-content">Liderando auditorías inteligentes e integraciones LLM.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date font-mono">2021 - 2023</div>
+                    <div class="timeline-content">Desarrollo de modelos predictivos en el sector financiero / salud.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date font-mono">2019 - 2021</div>
+                    <div class="timeline-content">Ingeniería de datos, pipelines y analítica descriptiva.</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Sección de Proyectos -->
-    <section id="proyectos" class="projects">
+    <section id="proyectos" class="section bg-secondary-wrap">
         <div class="container">
-            <h2>Proyectos Destacados</h2>
-            <div class="grid">
-                <!-- Tarjeta de Proyecto 1 -->
-                <div class="card">
-                    <h3>RAG-NOM Assistant</h3>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">LangChain</span>
-                        <span class="tag">NLP</span>
-                        <span class="tag">ChromaDB</span>
-                    </div>
-                    <p>Validador y Asistente RAG de Normatividad en Salud con IA. Automatiza la auditoría de expedientes médicos revisando su diseño contra las distintas Normas Oficiales Mexicanas.</p>
-                    <a href="https://github.com/AlexSc97/RAG-NOM-Assistant" target="_blank" class="project-link">Ver en GitHub &rarr;</a>
-                </div>
-                
-                <!-- Tarjeta de Proyecto de Ejemplo 2 -->
-                <div class="card">
-                    <h3>Análisis de Sentimientos</h3>
-                    <div class="tags">
-                        <span class="tag">NLP</span>
-                        <span class="tag">TensorFlow</span>
-                        <span class="tag">NLTK</span>
-                    </div>
-                    <p>Clasificador de texto para opiniones de productos utilizando redes neuronales y procesamiento de lenguaje natural.</p>
-                    <a href="#" class="project-link">Ver en GitHub &rarr;</a>
-                </div>
-                
-                <!-- Tarjeta de Proyecto de Ejemplo 3 -->
-                <div class="card">
-                    <h3>Dashboard de Ventas</h3>
-                    <div class="tags">
-                        <span class="tag">PowerBI</span>
-                        <span class="tag">SQL</span>
-                    </div>
-                    <p>Panel interactivo para la visualización de KPIs de ventas y rendimiento regional de tiendas retail.</p>
-                    <a href="#" class="project-link">Ver Detalles &rarr;</a>
-                </div>
+            <div class="section-header animate-on-scroll">
+                <span class="section-label font-mono">Portafolio</span>
+                <h2 class="section-title">Sistemas Principales</h2>
             </div>
-        </div>
-    </section>
-
-    <!-- Sección de Modelos Streamlit -->
-    <section id="modelos" class="models">
-        <div class="container">
-            <h2>Modelos Interactivos</h2>
-            <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem;">Prueba directamente algunos los modelos desarrollados. Haz clic en las aplicaciones de muestra a continuación.</p>
             
-            <div class="grid">
-                <!-- Tarjeta de Modelo 1 -->
-                <div class="card model-card">
-                    <div class="model-preview" style="background: linear-gradient(135deg, #e0e7ff 0%, #f3f4f6 100%); color: var(--accent-color); font-weight: 700; font-size: 1.5rem; flex-direction: column; gap: 0.5rem;">
-                        <span style="font-size: 2rem;">🏥</span>
-                        NOM-Query
+            <div class="grid proyectos-grid">
+                
+                <!-- Proyecto RAG-NOM -->
+                <div class="project-card animate-on-scroll" style="--delay: 0.1s">
+                    <div class="project-img-container">
+                        <!-- Placeholder visual para RAG NOM -->
+                        <div class="mockup-bg">🏥 NOM-Query Assistant</div>
                     </div>
-                    <h3>RAG-NOM Assistant</h3>
-                    <p>Chatbot especializado interactivo de salud para conversar y validar normativa en documentos clínicos, impulsado por embeddings y generador LLM.</p>
-                    <a href="https://rag-nom-assistant-pruxck34jhz5rw2cmgep8v.streamlit.app/" target="_blank" class="btn" style="width: 100%;">Probar Demo Interactivo</a>
+                    <div class="project-content">
+                        <div class="flex-between">
+                            <h3>RAG-NOM Assistant</h3>
+                            <a href="https://github.com/AlexSc97/RAG-NOM-Assistant" target="_blank" class="arrow-up-right">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 16.8V7H7.2"/></svg>
+                            </a>
+                        </div>
+                        <p>Validador y Asistente RAG de Normatividad en Salud con IA. Automatiza auditorías clínicas contra regulaciones federales.</p>
+                        
+                        <div class="tags">
+                            <span class="tag font-mono">Python</span>
+                            <span class="tag font-mono">LangChain</span>
+                            <span class="tag font-mono">NLP</span>
+                            <span class="tag font-mono">ChromaDB</span>
+                        </div>
+                    </div>
+                    <div class="project-metrics">
+                        <a href="https://rag-nom-assistant-pruxck34jhz5rw2cmgep8v.streamlit.app/" target="_blank" class="metric-link font-mono">Test Demo &rarr;</a>
+                    </div>
                 </div>
 
-                <!-- Tarjeta de Modelo de Ejemplo 2 -->
-                <div class="card model-card">
-                    <div class="model-preview">
-                        [Vista Previa del Simulador]
+                <!-- Proyecto 2: Reingreso Hospitalario -->
+                <div class="project-card animate-on-scroll" style="--delay: 0.2s">
+                    <div class="project-card-image" style="height: 180px; overflow: hidden; position: relative;">
+                        <!-- Mockup Background for Project 2 -->
+                        <div class="mockup-bg" style="font-size: 1.25rem;">🔬 Predicción de Reingreso</div>
                     </div>
-                    <h3>Simulador de Ingresos y Predicciones</h3>
-                    <p>Juega con las variables de un modelo de regresión lineal para predecir precios de casas.</p>
-                    <a href="#" class="btn" style="width: 100%;">Probar en Streamlit</a>
+                    <div class="project-content">
+                        <div class="flex-between">
+                            <h3>Modelo Reingreso Diabéticos</h3>
+                            <a href="https://github.com/AlexSc97/hospital-readmission-prediction-diabetes" target="_blank" class="arrow-up-right" aria-label="Ver Código Fuente">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 16.8V7H7.2"/></svg>
+                            </a>
+                        </div>
+                        <p>Modelo predictivo con enfoque hospitalario entrenado usando XGBoost para estimar la probabilidad de reingreso en pacientes diabéticos, balanceando clases con SMOTE.</p>
+                        <div class="tags">
+                            <span class="tag font-mono">Python</span>
+                            <span class="tag font-mono">XGBoost</span>
+                            <span class="tag font-mono">Pandas</span>
+                            <span class="tag font-mono">SMOTE</span>
+                        </div>
+                    </div>
+                    <div class="project-metrics">
+                        <a href="https://modelo-predictivo-reingreso-pacientes.onrender.com/" target="_blank" class="metric-link font-mono">Test Demo Interactiva &rarr;</a>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Pie de página -->
-    <footer id="contacto">
-        <div class="container">
-            <h2>Hablemos</h2>
-            <p>¿Interesado en mi perfil? Puedes contactarme a correo@ejemplo.com</p>
-            <div style="margin-top: 1rem;">
-                <a href="#" class="btn btn-outline" style="margin-left: 0;">LinkedIn</a>
-                <a href="#" class="btn btn-outline">GitHub</a>
+    <footer id="contacto" class="section">
+        <div class="container footer-content animate-on-scroll">
+            <h2 class="section-title">Iniciemos una conversación</h2>
+            <p class="text-secondary max-w-md mx-auto">Estoy abierto a nuevos proyectos y discusiones de alto nivel técnico. Hablemos.</p>
+            
+            <div class="footer-buttons mt-8">
+                <a href="#" class="btn btn-secondary">LinkedIn</a>
+                <a href="#" class="btn btn-secondary">GitHub</a>
+                <a href="mailto:correo@ejemplo.com" class="btn btn-primary">Enviar Email</a>
             </div>
-            <p style="margin-top: 3rem; font-size: 0.875rem;">&copy; 2024 Alejandro Silva. Construido con diseño moderno y minimalista.</p>
+            
+            <p class="copyright font-mono pb-8">&copy; 2024 Alejandro Silva. Diseñado con métricas limpias.</p>
         </div>
     </footer>
 
