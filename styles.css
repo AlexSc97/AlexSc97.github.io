@@ -100,19 +100,44 @@ nav {
 /* Hero Section */
 .hero {
   padding: 8rem 0;
-  text-align: center;
   background-color: var(--bg-secondary);
 }
 
-.hero h1 {
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.hero-content {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-content h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
 }
 
-.hero p {
-  font-size: 1.25rem;
-  max-width: 600px;
-  margin: 0 auto 2rem;
+.hero-content p {
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  mix-blend-mode: multiply; /* Da el efecto de transparencia con el fondo blanco */
+  opacity: 0.85;
 }
 
 .btn {
@@ -228,7 +253,14 @@ footer p {
   .nav-links {
     display: none; /* Add JS later for mobile menu */
   }
-  .hero h1 {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-content h1 {
     font-size: 2.5rem;
   }
 }
