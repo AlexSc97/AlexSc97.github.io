@@ -99,45 +99,72 @@ nav {
 
 /* Hero Section */
 .hero {
-  padding: 8rem 0;
+  position: relative;
+  padding: 10rem 0;
   background-color: var(--bg-secondary);
+  overflow: hidden;
 }
 
-.hero-container {
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 4rem;
-}
-
-.hero-content {
-  flex: 1;
-  text-align: left;
-}
-
-.hero-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero-content p {
-  font-size: 1.15rem;
-  margin-bottom: 2rem;
-  color: var(--text-secondary);
-}
-
-.hero-image {
-  flex: 1;
-  display: flex;
   justify-content: center;
 }
 
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--border-radius);
-  mix-blend-mode: multiply; /* Da el efecto de transparencia con el fondo blanco */
-  opacity: 0.85;
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  opacity: 0.15; /* Imagen muy sutil para que no opaque el texto */
+  filter: grayscale(10px);
+}
+
+.hero-container.text-overlay {
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .btn {
@@ -253,12 +280,8 @@ footer p {
   .nav-links {
     display: none; /* Add JS later for mobile menu */
   }
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-content {
-    text-align: center;
+  .hero {
+    padding: 6rem 0;
   }
   .hero-content h1 {
     font-size: 2.5rem;
