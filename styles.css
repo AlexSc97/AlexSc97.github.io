@@ -452,6 +452,70 @@ nav {
   flex: 1;
 }
 
+/* Labs / Experimental */
+.lab-card {
+  position: relative;
+  background-color: hsla(var(--foreground), 0.02);
+  border: 1px solid hsla(var(--border), 0.6);
+  border-radius: 16px;
+  padding: 3rem;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lab-card:hover {
+  background-color: hsla(var(--foreground), 0.035);
+  border-color: hsla(var(--accent), 0.5);
+  box-shadow: 0 10px 40px -10px hsla(var(--accent), 0.1);
+  transform: translateY(-2px);
+}
+
+.lab-card-glow {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, hsla(var(--accent), 0.15) 0%, transparent 65%);
+  filter: blur(25px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.lab-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.lab-status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: hsl(var(--accent));
+  border-radius: 50%;
+  box-shadow: 0 0 12px 2px hsla(var(--accent), 0.8);
+  animation: pulse-slow 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.lab-features li {
+  color: hsl(var(--muted-foreground));
+}
+
+.lab-tag {
+  background-color: transparent !important;
+  border: 1px dashed hsla(var(--accent), 0.4) !important;
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+.lab-card:hover .lab-tag {
+  border-style: solid !important;
+  color: hsl(var(--foreground)) !important;
+}
+
 .flex-between {
   display: flex;
   justify-content: space-between;
