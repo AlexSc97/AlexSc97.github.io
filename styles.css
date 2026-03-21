@@ -102,28 +102,36 @@ nav {
   position: relative;
   padding: 10rem 0;
   background-color: var(--bg-secondary);
-  background-image: url('assets/hero-tech.png');
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: multiply;
   overflow: hidden;
 }
 
-/* Capa semi-transparente para asegurar que el texto sea muy legible sobre la imagen */
-.hero::before {
-  content: "";
+.hero-bg-img {
   position: absolute;
-  top: 0; 
-  left: 0; 
-  width: 100%; 
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  background-color: rgba(249, 250, 251, 0.85); /* Mismo color que --bg-secondary al 85% */
+  object-fit: cover;
+  object-position: center;
   z-index: 0;
+  opacity: 0.35; /* Ajuste para que la imagen sea muy visible en el fondo */
+  pointer-events: none; /* Asegura que no bloquee interacciones */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(249, 250, 251, 0.4) 0%, rgba(249, 250, 251, 0.9) 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .hero-container {
   position: relative;
-  z-index: 1;
+  z-index: 2; /* Por encima de la imagen y el overlay */
 }
 
 .hero-content {

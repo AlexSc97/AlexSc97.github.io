@@ -30,6 +30,11 @@
 
     <!-- Sección Hero -->
     <section id="inicio" class="hero">
+        <!-- Imagen de fondo puramente decorativa -->
+        <img src="assets/hero-tech.png" alt="" class="hero-bg-img" aria-hidden="true" />
+        <!-- Overlay semitransparente para proteger la legibilidad del texto -->
+        <div class="hero-overlay"></div>
+
         <div class="container hero-container">
             <div class="hero-content fade-in-up">
                 <h1>Hola, soy Alejandro Silva</h1>
@@ -47,16 +52,17 @@
         <div class="container">
             <h2>Proyectos Destacados</h2>
             <div class="grid">
-                <!-- Tarjeta de Proyecto de Ejemplo 1 -->
+                <!-- Tarjeta de Proyecto 1 -->
                 <div class="card">
-                    <h3>Predicción de Churn</h3>
+                    <h3>RAG-NOM Assistant</h3>
                     <div class="tags">
                         <span class="tag">Python</span>
-                        <span class="tag">Scikit-Learn</span>
-                        <span class="tag">Pandas</span>
+                        <span class="tag">LangChain</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">ChromaDB</span>
                     </div>
-                    <p>Modelo predictivo para identificar clientes con alto riesgo de abandono en una empresa de telecomunicaciones.</p>
-                    <a href="#" class="project-link">Ver en GitHub &rarr;</a>
+                    <p>Validador y Asistente RAG de Normatividad en Salud con IA. Automatiza la auditoría de expedientes médicos revisando su diseño contra las distintas Normas Oficiales Mexicanas.</p>
+                    <a href="https://github.com/AlexSc97/RAG-NOM-Assistant" target="_blank" class="project-link">Ver en GitHub &rarr;</a>
                 </div>
                 
                 <!-- Tarjeta de Proyecto de Ejemplo 2 -->
@@ -92,14 +98,15 @@
             <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem;">Prueba directamente algunos los modelos desarrollados. Haz clic en las aplicaciones de muestra a continuación.</p>
             
             <div class="grid">
-                <!-- Tarjeta de Modelo de Ejemplo 1 -->
+                <!-- Tarjeta de Modelo 1 -->
                 <div class="card model-card">
-                    <div class="model-preview">
-                        [Vista Previa de la App Streamlit]
+                    <div class="model-preview" style="background: linear-gradient(135deg, #e0e7ff 0%, #f3f4f6 100%); color: var(--accent-color); font-weight: 700; font-size: 1.5rem; flex-direction: column; gap: 0.5rem;">
+                        <span style="font-size: 2rem;">🏥</span>
+                        NOM-Query
                     </div>
-                    <h3>Clasificador de Imágenes Médicas</h3>
-                    <p>Sube una imagen y el modelo clasificará la condición basada en una CNN pre-entrenada.</p>
-                    <a href="#" class="btn" style="width: 100%;">Probar en Streamlit</a>
+                    <h3>RAG-NOM Assistant</h3>
+                    <p>Chatbot especializado interactivo de salud para conversar y validar normativa en documentos clínicos, impulsado por embeddings y generador LLM.</p>
+                    <a href="https://rag-nom-assistant-pruxck34jhz5rw2cmgep8v.streamlit.app/" target="_blank" class="btn" style="width: 100%;">Probar Demo Interactivo</a>
                 </div>
 
                 <!-- Tarjeta de Modelo de Ejemplo 2 -->
