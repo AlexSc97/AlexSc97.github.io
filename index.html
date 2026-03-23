@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -27,7 +27,7 @@
             <nav>
                 <div class="logo">Alejandro Silva.</div>
                 <!-- Menu Toggle para Mobile -->
-                <button class="mobile-menu-btn" aria-label="Abrir menú">
+                <button class="mobile-menu-btn" aria-label="Open menu">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
                         <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -36,11 +36,25 @@
                     </svg>
                 </button>
                 <ul class="nav-links">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#sobre-mi">Sobre mí</a></li>
-                    <li><a href="#proyectos">Expertise</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#inicio" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#sobre-mi" data-i18n="nav.about">About</a></li>
+                    <li><a href="#proyectos" data-i18n="nav.expertise">Expertise</a></li>
+                    <li><a href="#contacto" data-i18n="nav.contact">Contact</a></li>
                 </ul>
+                <!-- Language Toggle -->
+                <button id="lang-toggle" class="lang-toggle-btn" aria-label="Switch language">
+                    <span class="lang-globe">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                        </svg>
+                    </span>
+                    <span data-i18n="lang.toggle">ES</span>
+                </button>
             </nav>
         </div>
     </header>
@@ -54,19 +68,19 @@
                 <!-- Badge Animado -->
                 <div class="badge-status">
                     <span class="pulse-dot"></span>
-                    <span class="font-mono text-sm tracking-widest uppercase">Disponible para nuevos retos</span>
+                    <span class="font-mono text-sm tracking-widest uppercase" data-i18n="hero.badge">Available for new challenges</span>
                 </div>
 
-                <h1 class="hero-title">Hola, soy Alejandro Silva</h1>
-                <p class="hero-subtitle">
-                    Soy un <strong>Científico de datos</strong> enfocado en construir sistemas de datos que generan
-                    impacto real — desde la exploración hasta la producción. Mi background en el sector incluye 5 años
-                    trabajando en entornos de <strong>alta exigencia y datos críticos</strong>, forjando una capacidad
-                    analítica orientada a consecuencias e impacto real.
+                <h1 class="hero-title" data-i18n="hero.title">Hi, I'm Alejandro Silva</h1>
+                <p class="hero-subtitle" data-i18n-html="hero.subtitle">
+                    I'm a <strong>Data Scientist</strong> focused on building data systems that drive real impact —
+                    from exploration to production. My background includes 5 years working in
+                    <strong>high-demand, mission-critical environments</strong>, forging an analytical mindset oriented
+                    toward consequences and real-world impact.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
-                    <a href="#contacto" class="btn btn-secondary">Contáctame</a>
+                    <a href="#proyectos" class="btn btn-primary" data-i18n="hero.btn.projects">View Projects</a>
+                    <a href="#contacto" class="btn btn-secondary" data-i18n="hero.btn.contact">Get in Touch</a>
                 </div>
             </div>
         </div>
@@ -77,19 +91,19 @@
         <div class="container stats-grid">
             <div class="stat-item animate-on-scroll" style="--delay: 0.1s">
                 <div class="stat-num font-mono">5+</div>
-                <div class="stat-label">Años Enfermería</div>
+                <div class="stat-label" data-i18n="stat.nursing">Years in Nursing</div>
             </div>
             <div class="stat-item animate-on-scroll" style="--delay: 0.2s">
                 <div class="stat-num font-mono">~1</div>
-                <div class="stat-label">Año Data Science</div>
+                <div class="stat-label" data-i18n="stat.datascience">Year Data Science</div>
             </div>
             <div class="stat-item animate-on-scroll" style="--delay: 0.3s">
                 <div class="stat-num font-mono">15+</div>
-                <div class="stat-label">Proyectos ML</div>
+                <div class="stat-label" data-i18n="stat.ml">ML Projects</div>
             </div>
             <div class="stat-item animate-on-scroll" style="--delay: 0.4s">
                 <div class="stat-num font-mono">100%</div>
-                <div class="stat-label">Orientado a Impacto</div>
+                <div class="stat-label" data-i18n="stat.impact">Impact-Driven</div>
             </div>
         </div>
     </section>
@@ -98,60 +112,66 @@
     <section id="sobre-mi" class="section">
         <div class="container about-grid">
             <div class="about-text animate-on-scroll">
-                <h2 class="section-title">Trayectoria & Filosofía</h2>
-                <p class="text-secondary" style="margin-bottom: 1.5rem;">
-                    Con 5 años de experiencia como Licenciado en Enfermería, mi transición hacia la Ingeniería en
-                    Sistemas y la Ciencia de Datos nace de una profunda fascinación por la tecnología y la búsqueda de
-                    resolver problemas complejos a escala.
+                <h2 class="section-title" data-i18n="about.title">Journey & Philosophy</h2>
+                <p class="text-secondary" style="margin-bottom: 1.5rem;" data-i18n="about.p1">
+                    With 5 years of experience as a Licensed Nurse, my transition into Systems Engineering and
+                    Data Science stems from a deep fascination with technology and the drive to solve complex
+                    problems at scale.
                 </p>
-                <p class="text-secondary">
-                    Mi resiliencia en entornos críticos y la capacidad de colaborar en equipos multidisciplinarios son
-                    el núcleo de mi trabajo. Hoy, combino el rigor de la estadística y el álgebra lineal con una visión
-                    pragmática para construir soluciones escalables que impacten donde más importa.
+                <p class="text-secondary" data-i18n="about.p2">
+                    My resilience in critical environments and the ability to collaborate in multidisciplinary teams
+                    are the core of my work. Today, I combine the rigor of statistics and linear algebra with a
+                    pragmatic vision to build scalable solutions that impact where it matters most.
                 </p>
             </div>
 
             <div class="timeline animate-on-scroll" style="--delay: 0.2s">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date font-mono">Actual (2025 — Presente)</div>
+                    <div class="timeline-date font-mono" data-i18n="timeline.date1">Current (2025 — Present)</div>
                     <div class="timeline-content">
-                        <strong style="display:block; margin-bottom: 0.5rem; color: hsl(var(--foreground));">Desarrollo
-                            de Sistemas e Integración de Soluciones de Datos.</strong>
-                        <p class="text-secondary" style="font-size: 0.95rem; margin-bottom: 0.5rem;">Enfocado en la
-                            convergencia de la Ingeniería de Software y Data Science, integrando modelos predictivos en
-                            arquitecturas de sistemas escalables.</p>
-                        <p class="text-secondary" style="font-size: 0.95rem; margin-bottom: 0.5rem;">Formación y
-                            experimentación continua: Implementando activamente nuevas tendencias como agentes de IA,
-                            arquitecturas RAG y herramientas de MLOps para optimizar flujos de trabajo.</p>
-                        <p class="text-secondary" style="font-size: 0.95rem;">Abierto a colaborar en proyectos
-                            tecnológicos desafiantes donde pueda aplicar mi capacidad analítica, curiosidad técnica y
-                            resiliencia en equipos de alto rendimiento.</p>
+                        <strong style="display:block; margin-bottom: 0.5rem; color: hsl(var(--foreground));"
+                            data-i18n="timeline.title1">Systems Development & Data Solutions Integration.</strong>
+                        <p class="text-secondary" style="font-size: 0.95rem; margin-bottom: 0.5rem;"
+                            data-i18n="timeline.p1a">Focused on the convergence of Software Engineering and Data
+                            Science, integrating predictive models into scalable system architectures.</p>
+                        <p class="text-secondary" style="font-size: 0.95rem; margin-bottom: 0.5rem;"
+                            data-i18n="timeline.p1b">Continuous learning and experimentation: Actively implementing new
+                            trends such as AI agents, RAG architectures, and MLOps tools to optimize workflows.</p>
+                        <p class="text-secondary" style="font-size: 0.95rem;" data-i18n="timeline.p1c">Open to
+                            collaborating on challenging technology projects where I can apply my analytical skills,
+                            technical curiosity, and resilience within high-performance teams.</p>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date font-mono">2024 — Actual</div>
+                    <div class="timeline-date font-mono" data-i18n="timeline.date2">2024 — Current</div>
                     <div class="timeline-content">
-                        <strong style="display:block; margin-bottom: 0.5rem; color: hsl(var(--foreground));">Ingeniería en Sistemas (UVM) & Data Science (4Geeks).</strong>
-                        <p class="text-secondary" style="font-size: 0.95rem; margin-bottom: 0.5rem;">Cursando la titulación en Ingeniería en Sistemas Computacionales, cimentando bases para arquitecturas y algoritmos robustos.</p>
-                        <p class="text-secondary" style="font-size: 0.95rem;">Egresado del Bootcamp de Data Science (2025-2026), enfocado en la aplicación práctica de modelos analíticos y Machine Learning en producción.</p>
+                        <strong style="display:block; margin-bottom: 0.5rem; color: hsl(var(--foreground));"
+                            data-i18n="timeline.title2">Systems Engineering (UVM) & Data Science (4Geeks).</strong>
+                        <p class="text-secondary" style="font-size: 0.95rem; margin-bottom: 0.5rem;"
+                            data-i18n="timeline.p2a">Pursuing a degree in Computer Systems Engineering, building
+                            foundations for robust architectures and algorithms.</p>
+                        <p class="text-secondary" style="font-size: 0.95rem;" data-i18n="timeline.p2b">Data Science
+                            Bootcamp Graduate (2025-2026), focused on the practical application of analytical models and
+                            Machine Learning in production.</p>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date font-mono">2021 — 2025</div>
+                    <div class="timeline-date font-mono" data-i18n="timeline.date3">2021 — 2025</div>
                     <div class="timeline-content">
-                        <strong style="display:block; margin-bottom: 0.5rem; color: hsl(var(--foreground));">Gestión
-                            Operativa y Resiliencia en Entornos Críticos (IMSS).</strong>
-                        <p class="text-secondary" style="font-size: 0.95rem; margin-bottom: 0.5rem;">5 años de
-                            trayectoria como Licenciado en Enfermería, liderando procesos bajo presión y garantizando la
-                            integridad de datos clínicos en sistemas de salud pública.</p>
-                        <p class="text-secondary" style="font-size: 0.95rem;">Especialista en comunicación efectiva y
-                            trabajo multidisciplinario, habilidades transferibles al ciclo de desarrollo de software y
-                            gestión de stakeholders.</p>
+                        <strong style="display:block; margin-bottom: 0.5rem; color: hsl(var(--foreground));"
+                            data-i18n="timeline.title3">Operations Management & Resilience in Critical Environments
+                            (IMSS).</strong>
+                        <p class="text-secondary" style="font-size: 0.95rem; margin-bottom: 0.5rem;"
+                            data-i18n="timeline.p3a">5-year career as a Licensed Nurse, leading processes under pressure
+                            and ensuring the integrity of clinical data in public health systems.</p>
+                        <p class="text-secondary" style="font-size: 0.95rem;" data-i18n="timeline.p3b">Specialist in
+                            effective communication and multidisciplinary teamwork, transferable skills to the software
+                            development lifecycle and stakeholder management.</p>
                     </div>
                 </div>
 
@@ -163,8 +183,8 @@
     <section id="proyectos" class="section bg-secondary-wrap">
         <div class="container">
             <div class="section-header animate-on-scroll">
-                <span class="section-label font-mono">Portafolio</span>
-                <h2 class="section-title">Sistemas Principales</h2>
+                <span class="section-label font-mono" data-i18n="projects.label">Portfolio</span>
+                <h2 class="section-title" data-i18n="projects.title">Core Systems</h2>
             </div>
 
             <div class="grid proyectos-grid">
@@ -185,8 +205,8 @@
                                 </svg>
                             </a>
                         </div>
-                        <p>Validador y Asistente RAG de Normatividad en Salud con IA. Automatiza auditorías clínicas
-                            contra regulaciones federales.</p>
+                        <p data-i18n-html="project1.desc">AI-powered RAG Validator & Assistant for Health Regulations.
+                            Automates clinical audits against federal regulations.</p>
 
                         <div class="tags">
                             <span class="tag font-mono">Python</span>
@@ -197,30 +217,31 @@
                     </div>
                     <div class="project-metrics">
                         <a href="https://rag-nom-assistant-pruxck34jhz5rw2cmgep8v.streamlit.app/" target="_blank"
-                            class="metric-link font-mono">Test Demo &rarr;</a>
+                            class="metric-link font-mono" data-i18n="project1.demo">Test Demo →</a>
                     </div>
                 </div>
 
                 <!-- Proyecto 2: Reingreso Hospitalario -->
                 <div class="project-card animate-on-scroll" style="--delay: 0.2s">
                     <div class="project-img-container">
-                        <img src="assets/diabetes_project.png" alt="Modelo de Predicción de Diabetes"
+                        <img src="assets/diabetes_project.png" alt="Diabetes Prediction Model"
                             class="project-actual-img" />
                     </div>
                     <div class="project-content">
                         <div class="flex-between">
-                            <h3>Modelo Predicción de Reingreso Hospitalario</h3>
+                            <h3 data-i18n="project2.title">Hospital Readmission Prediction Model</h3>
                             <a href="https://github.com/AlexSc97/hospital-readmission-prediction-diabetes"
-                                target="_blank" class="arrow-up-right" aria-label="Ver Código Fuente">
+                                target="_blank" class="arrow-up-right" aria-label="View Source Code">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2">
                                     <path d="M7 17l9.2-9.2M17 16.8V7H7.2" />
                                 </svg>
                             </a>
                         </div>
-                        <p>Modelo predictivo con enfoque hospitalario entrenado usando XGBoost para estimar la
-                            probabilidad de reingreso en pacientes diabéticos, balanceando clases con SMOTE. <br><strong
-                                style="color: hsl(var(--primary));">Métrica de evaluación principal: Recall 84%</strong>
+                        <p data-i18n-html="project2.desc">Predictive model with a hospital-focused approach trained
+                            using XGBoost to estimate the readmission probability of diabetic patients, balancing classes
+                            with SMOTE. <br><strong style="color: hsl(var(--primary));">Primary evaluation metric:
+                                Recall 84%</strong>
                         </p>
                         <div class="tags">
                             <span class="tag font-mono">Python</span>
@@ -231,7 +252,7 @@
                     </div>
                     <div class="project-metrics">
                         <a href="https://modelo-predictivo-reingreso-pacientes.onrender.com/" target="_blank"
-                            class="metric-link font-mono">Test Demo Interactiva &rarr;</a>
+                            class="metric-link font-mono" data-i18n="project2.demo">Interactive Demo →</a>
                     </div>
                 </div>
 
@@ -243,8 +264,10 @@
     <section id="labs" class="section" style="border-top: 1px solid hsla(var(--border), 0.3);">
         <div class="container animate-on-scroll" style="--delay: 0.1s">
             <div class="section-header" style="text-align: left; margin-bottom: 3rem;">
-                <span class="section-label font-mono" style="color: hsl(var(--accent));">Laboratorio Confidencial</span>
-                <h2 class="section-title" style="font-size: 2.5rem;">Sistemas en Desarrollo</h2>
+                <span class="section-label font-mono" style="color: hsl(var(--accent));"
+                    data-i18n="labs.label">Confidential Lab</span>
+                <h2 class="section-title" style="font-size: 2.5rem;" data-i18n="labs.title">Systems Under Development
+                </h2>
             </div>
 
             <div class="lab-card">
@@ -253,29 +276,29 @@
                     <div class="flex-between" style="align-items: flex-start; margin-bottom: 1.5rem;">
                         <div>
                             <span class="font-mono text-xs uppercase tracking-widest"
-                                style="color: hsl(var(--primary)); margin-bottom: 0.75rem; display: block;">{ Fase Alpha
-                                }</span>
+                                style="color: hsl(var(--primary)); margin-bottom: 0.75rem; display: block;"
+                                data-i18n="labs.phase">{ Alpha Phase }</span>
                             <h3 style="font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em;">ElephAutoML</h3>
-                            <p class="text-secondary" style="font-size: 1rem; margin-top: 0.25rem;">AI Data Science
-                                Automation Platform</p>
+                            <p class="text-secondary" style="font-size: 1rem; margin-top: 0.25rem;"
+                                data-i18n="labs.subtitle">AI Data Science Automation Platform</p>
                         </div>
                         <div class="lab-status-dot"></div>
                     </div>
 
-                    <p style="margin-bottom: 2rem; line-height: 1.7;">Plataforma multi-agente diseñada para abstraer y
-                        automatizar flujos completos de Data Science, eliminando el boilerplate y estandarizando
-                        tuberías de datos mediante agentes colaborativos.</p>
+                    <p style="margin-bottom: 2rem; line-height: 1.7;" data-i18n="labs.desc">Multi-agent platform
+                        designed to abstract and automate complete Data Science workflows, eliminating boilerplate and
+                        standardizing data pipelines through collaborative agents.</p>
 
                     <ul class="lab-features text-secondary font-mono"
                         style="font-size: 0.85rem; margin-bottom: 2.5rem; list-style-type: '>'; padding-left: 1rem;">
-                        <li style="padding-left: 0.75rem; margin-bottom: 0.75rem;">Arquitectura iterativa de 6 agentes
-                            paralelos con ejecución concurrente.</li>
-                        <li style="padding-left: 0.75rem; margin-bottom: 0.75rem;">Sub-agentes NLP especializados
-                            (embeddings, NER, topic modeling, sentiment analysis).</li>
-                        <li style="padding-left: 0.75rem; margin-bottom: 0.75rem;">Context Brain (Memoria central
-                            compartida respaldada por SQLite).</li>
-                        <li style="padding-left: 0.75rem;">Checkpoints de control con validación de aprobación humana
-                            para inserciones de acciones críticas.</li>
+                        <li style="padding-left: 0.75rem; margin-bottom: 0.75rem;" data-i18n="labs.f1">Iterative
+                            architecture of 6 parallel agents with concurrent execution.</li>
+                        <li style="padding-left: 0.75rem; margin-bottom: 0.75rem;" data-i18n="labs.f2">Specialized NLP
+                            sub-agents (embeddings, NER, topic modeling, sentiment analysis).</li>
+                        <li style="padding-left: 0.75rem; margin-bottom: 0.75rem;" data-i18n="labs.f3">Context Brain
+                            (Centralized shared memory backed by SQLite).</li>
+                        <li style="padding-left: 0.75rem;" data-i18n="labs.f4">Control checkpoints with human approval
+                            validation for critical action insertions.</li>
                     </ul>
 
                     <div class="tags" style="gap: 0.75rem;">
@@ -294,21 +317,25 @@
     <!-- Pie de página -->
     <footer id="contacto" class="section">
         <div class="container footer-content animate-on-scroll">
-            <h2 class="section-title">Iniciemos una conversación</h2>
-            <p class="text-secondary max-w-md mx-auto">Estoy abierto a nuevos proyectos y discusiones de alto nivel
-                técnico. Hablemos.</p>
+            <h2 class="section-title" data-i18n="footer.title">Let's Start a Conversation</h2>
+            <p class="text-secondary max-w-md mx-auto" data-i18n="footer.desc">I'm open to new projects and high-level
+                technical discussions. Let's talk.</p>
 
             <div class="footer-buttons mt-8">
                 <a href="https://www.linkedin.com/in/manuel-alejandro-silva/" target="_blank"
                     class="btn btn-secondary">LinkedIn</a>
                 <a href="https://github.com/AlexSc97" target="_blank" class="btn btn-secondary">GitHub</a>
-                <a href="mailto:alejandro.silva.mldev@gmail.com" class="btn btn-primary">Enviar Email</a>
+                <a href="mailto:alejandro.silva.mldev@gmail.com" class="btn btn-primary"
+                    data-i18n="footer.email">Send Email</a>
             </div>
 
-            <p class="copyright font-mono pb-8">&copy; 2026 Alejandro Silva. Diseñado con métricas limpias.</p>
+            <p class="copyright font-mono pb-8" data-i18n="footer.copyright">© 2026 Alejandro Silva. Designed with
+                clean metrics.</p>
         </div>
     </footer>
 
+    <!-- Translations -->
+    <script src="translations.js"></script>
     <!-- Script de lógica -->
     <script src="script.js"></script>
 </body>
